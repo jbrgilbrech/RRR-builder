@@ -41,6 +41,9 @@ wget -q --show-progress --progress=bar:force https://kernel.ubuntu.com/~kernel-p
 sudo apt install ./*.deb -y
 # Install Nala
 apt-get install nala -y
+# Remove Gnome and Install KDE 
+apt-get remove --purge gnome*
+apt-get install kde-standard
 # Clean up system files
 apt-get clean -y
 sed -i 's/kinetic/devel/g' /etc/apt/sources.list
