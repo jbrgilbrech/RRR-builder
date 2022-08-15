@@ -42,8 +42,10 @@ sudo apt install ./*.deb -y
 # Install Nala
 apt-get install nala -y
 # Remove Gnome and Install KDE 
-apt-get remove --purge gnome*
-apt-get install kde-standard
+apt-get remove --purge gnome* -y
+apt-get install kde-standard -y 
+apt-get install sddm -y
+systemctl enable sddm.service
 # Clean up system files
 apt-get clean -y
 sed -i 's/kinetic/devel/g' /etc/apt/sources.list
